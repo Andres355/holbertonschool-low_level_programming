@@ -1,25 +1,27 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
- * Desc: Entry
- * Return: Always 0 (Success)
+ *main - print a negative, positive and zero
+ *Return: something
  */
 int main(void)
 {
-	int b = 00;
-
-	while (b <= 999)
-	{
-		putchar(b / 100 + '0');
-		putchar(b % 100 + '0');
-		b++;
-		if (b != 100)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-	putchar('\n');
-	return (0);
+int n, o;
+for (o = 0; o < 10; o++)
+{
+for (n = 0; n < 10; n++)
+{
+putchar((char)(o + 48));
+putchar((char)(n + 48));
+if (!(n == 9 && o == 9))
+{
+putchar(44);
+putchar(32);
+}
+else
+{
+putchar('\n');
+}
+}
+}
+return (0);
 }
